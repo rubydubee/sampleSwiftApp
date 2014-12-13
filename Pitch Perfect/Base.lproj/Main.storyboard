@@ -115,6 +115,15 @@
                                     <action selector="playSlow:" destination="FAX-XX-Kru" eventType="touchUpInside" id="qOa-MZ-bU5"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Z1-rq-QIa">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="chipmunk">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playChipmunk:" destination="FAX-XX-Kru" eventType="touchUpInside" id="vgn-yr-ibn"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eTU-rZ-C0Y">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="stop_record">
@@ -133,11 +142,24 @@
                                     <action selector="playFast:" destination="FAX-XX-Kru" eventType="touchUpInside" id="zG9-M2-O8x"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xps-00-k25">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="darthvader">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playDarthVader:" destination="FAX-XX-Kru" eventType="touchUpInside" id="0Iu-JL-Xgj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1Z1-rq-QIa" firstAttribute="leading" secondItem="Wd0-dA-h9O" secondAttribute="leadingMargin" constant="30" id="2st-yL-GkL"/>
                             <constraint firstAttribute="centerX" secondItem="eTU-rZ-C0Y" secondAttribute="centerX" id="4vN-RR-oKd"/>
+                            <constraint firstItem="1Z1-rq-QIa" firstAttribute="top" secondItem="CbO-AZ-mgp" secondAttribute="bottom" constant="36" id="5qm-X4-eLF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="42o-8X-4SY" secondAttribute="trailing" constant="30" id="Ax4-pk-Jrv"/>
+                            <constraint firstItem="Xps-00-k25" firstAttribute="top" secondItem="42o-8X-4SY" secondAttribute="bottom" constant="36" id="AzE-fG-0Lq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xps-00-k25" secondAttribute="trailing" constant="30" id="ILW-Y9-z0w"/>
                             <constraint firstItem="42o-8X-4SY" firstAttribute="top" secondItem="UgQ-VW-Mzm" secondAttribute="bottom" constant="50" id="U56-P3-Uw8"/>
                             <constraint firstItem="CbO-AZ-mgp" firstAttribute="leading" secondItem="Wd0-dA-h9O" secondAttribute="leadingMargin" constant="30" id="WdC-cU-pXe"/>
                             <constraint firstItem="CbO-AZ-mgp" firstAttribute="top" secondItem="UgQ-VW-Mzm" secondAttribute="bottom" constant="50" id="Xa0-ab-ckH"/>
@@ -146,14 +168,20 @@
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="CbO-AZ-mgp"/>
+                                <exclude reference="1Z1-rq-QIa"/>
                                 <exclude reference="eTU-rZ-C0Y"/>
                                 <exclude reference="42o-8X-4SY"/>
+                                <exclude reference="Xps-00-k25"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="WdC-cU-pXe"/>
                                 <exclude reference="Xa0-ab-ckH"/>
+                                <exclude reference="2st-yL-GkL"/>
+                                <exclude reference="5qm-X4-eLF"/>
                                 <exclude reference="Ax4-pk-Jrv"/>
                                 <exclude reference="U56-P3-Uw8"/>
+                                <exclude reference="AzE-fG-0Lq"/>
+                                <exclude reference="ILW-Y9-z0w"/>
                                 <exclude reference="4vN-RR-oKd"/>
                                 <exclude reference="rrA-US-LWX"/>
                             </mask>
@@ -161,14 +189,20 @@
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="CbO-AZ-mgp"/>
+                                <include reference="1Z1-rq-QIa"/>
                                 <include reference="eTU-rZ-C0Y"/>
                                 <include reference="42o-8X-4SY"/>
+                                <include reference="Xps-00-k25"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="WdC-cU-pXe"/>
                                 <include reference="Xa0-ab-ckH"/>
+                                <include reference="2st-yL-GkL"/>
+                                <include reference="5qm-X4-eLF"/>
                                 <include reference="Ax4-pk-Jrv"/>
                                 <include reference="U56-P3-Uw8"/>
+                                <include reference="AzE-fG-0Lq"/>
+                                <include reference="ILW-Y9-z0w"/>
                                 <include reference="4vN-RR-oKd"/>
                                 <include reference="rrA-US-LWX"/>
                             </mask>
@@ -202,6 +236,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chipmunk" width="100" height="100"/>
+        <image name="darthvader" width="100" height="100"/>
         <image name="fastspeed" width="100" height="100"/>
         <image name="microphone" width="100" height="100"/>
         <image name="slowspeed" width="100" height="100"/>
