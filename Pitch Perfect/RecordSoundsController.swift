@@ -49,7 +49,7 @@ class RecordSoundsController: UIViewController, AVAudioRecorderDelegate {
         println(filePath)
         
         var session = AVAudioSession.sharedInstance()
-        session.setCategory(AVAudioSessionCategoryPlayAndRecord, error: nil)
+        session.setCategory(AVAudioSessionCategoryPlayAndRecord, withOptions: AVAudioSessionCategoryOptions.DefaultToSpeaker, error: nil)
         
         audioRecorder = AVAudioRecorder(URL: filePath, settings: nil, error: nil)
         audioRecorder.delegate = self
@@ -64,7 +64,6 @@ class RecordSoundsController: UIViewController, AVAudioRecorderDelegate {
             recordedAudio.filePathUrl = recorder.url
             recordedAudio.title = recorder.url.lastPathComponent
             
-            //TODO: create segue
             self.performSegueWithIdentifier("stopRecording", sender: recordedAudio)
         } else {
             println("Audio Recording Failed")
